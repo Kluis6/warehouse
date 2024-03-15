@@ -1,6 +1,11 @@
 import Link from "next/link";
 
 import Cardproduct from "./cardproduct";
+import {
+  BsArrowRight,
+  BsChevronBarRight,
+  BsChevronRight,
+} from "react-icons/bs";
 
 export default function sectionProducts() {
   return (
@@ -28,11 +33,12 @@ export default function sectionProducts() {
       <div className="xl:col-span-2 md:col-span-4 col-span-6">
         <Cardproduct />
       </div>
-      <div className="col-span-12">
-        <Link href={""}>
-          <h3 className="text-blue-500 text-sm text-right font-semibold">
+      <div className="col-span-12 flex justify-end ">
+        <Link href={""} className="flex items-center space-x-2">
+          <h3 className="text-blue-600 text-sm font-semibold">
             Ver mais produtos{" "}
           </h3>
+          <BsChevronRight className="text-blue-600" />
         </Link>
       </div>
     </div>
