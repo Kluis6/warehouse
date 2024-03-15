@@ -11,7 +11,7 @@ export default function Nav() {
   const searchSubmit = (e: { target: { value: SetStateAction<string> } }) => {
     setSearchInput(e.target.value);
   };
-
+  const enviar:string = searchInput
   const searchClear = () => {
     setSearchInput("");
   };
@@ -21,9 +21,9 @@ export default function Nav() {
         <div className="flex items-center justify-between space-x-2">
           <div className="flex items-center space-x-2">
             <BsHouse className="text-slate-800 " size={22} />
-            <div className="text-xl font-medium text-slate-800 hidden md:flex">
+            <h1 className="text-xl font-medium text-slate-800 hidden md:flex">
               Nome da bagaça
-            </div>
+            </h1>
           </div>
           <div>
             <form className="flex items-center">
@@ -41,7 +41,7 @@ export default function Nav() {
                   >
                     <BsX className="text-gray-500 dark:text-gray-400" />
                   </button>
-                  <div className="h-contend w-[1px] py-4 bg-slate-300"></div>
+                  <div className="h-contend w-[1px] py-4 bg-slate-300 mx-1"></div>
                   <button
                     type="submit"
                     className="h-content hover:bg-slate-200 p-2.5 z-10"
@@ -53,7 +53,7 @@ export default function Nav() {
                   onChange={searchSubmit}
                   type="search"
                   value={searchInput}
-                  className="lg:w-[35rem] md:w-[25rem] w-[14rem]  bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block  pe-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="lg:w-[35rem] md:w-[25rem] w-[14rem] appearance-none  bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block pe-20 md:pe-24 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Aqui você encontra..."
                   required
                 />
