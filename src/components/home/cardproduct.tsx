@@ -23,7 +23,7 @@ export default function Cardproduct() {
           <BsPlusLg size={20} className="text-red-700" />
         )}
       </button>
-      <Link href='/product'>
+      <Link href='/clientstore'>
         <div className="w-full h-[15rem] bg-slate-500"></div>
 
         <div className="lg:px-4 px-2 py-4 space-y-4">
