@@ -1,3 +1,4 @@
+import Footers from "@/components/home/footers";
 import Nav from "@/components/nav";
 import { Metadata } from "next";
 import React from "react";
@@ -16,6 +17,7 @@ export default function LayoutDashboard({
     <>
       <Nav />
       {children}
+      <Footers/>
     </>
   );
 }
