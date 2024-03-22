@@ -8,7 +8,7 @@ export default function Product() {
         <div className="grid-cols-12 grid gap-4">
           <div className="col-span-12">
             <h3 className="text-slate-700 text-lg lg:text-xl font-semibold">
-              Caixa d'água Polietileno 1.000L Azul Fortlev
+              Caixa água Polietileno 1.000L Azul Fortlev
             </h3>
           </div>
           <div className="col-span-12 md:col-span-6">
