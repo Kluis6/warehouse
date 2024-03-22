@@ -1,5 +1,5 @@
-import React from "react";
 
-export default function ManagerPage() {
+
+export default function ManagerAds() {
   return <div>page</div>;
 }
