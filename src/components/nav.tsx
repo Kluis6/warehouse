@@ -11,7 +11,7 @@ export default function Nav() {
   const searchSubmit = (e: { target: { value: SetStateAction<string> } }) => {
     setSearchInput(e.target.value);
   };
-  const enviar:string = searchInput
+  const enviar: string = searchInput;
   const searchClear = () => {
     setSearchInput("");
   };
@@ -21,9 +21,11 @@ export default function Nav() {
         <div className="flex items-center justify-between space-x-2">
           <div className="flex items-center space-x-2">
             <BsHouse className="text-slate-800 " size={22} />
-            <h1 className="text-xl font-medium text-slate-800 hidden md:flex">
-              Nome da bagaça
-            </h1>
+            <Link href="/">
+              <h1 className="text-xl font-medium text-slate-800 hidden md:flex">
+                Zé do Bazar
+              </h1>
+            </Link>
           </div>
           <div>
             <form className="flex items-center">

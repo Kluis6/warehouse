@@ -21,3 +21,11 @@ export default function Home() {
     </>
   );
 }
+
+// export async function generateStaticParams() {
+//   const request = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const posts = await request.json();
+//   return posts.map((post: { id: any; }) => ({
+//     postId: String(post.id)
+//   }));
+// }
