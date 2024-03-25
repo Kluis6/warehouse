@@ -1,12 +1,14 @@
 "use client";
-
 import Link from "next/link";
 import React, { SetStateAction, useState } from "react";
+import Server from "@/api/server.json";
 
 import { BsHouse, BsList, BsPerson, BsSearch, BsX } from "react-icons/bs";
 
 export default function Nav() {
   const [searchInput, setSearchInput] = useState("");
+
+  const ServerData = Server;
 
   const searchSubmit = (e: { target: { value: SetStateAction<string> } }) => {
     setSearchInput(e.target.value);
@@ -71,12 +73,14 @@ export default function Nav() {
             </button>
           </div>
         </div>
-        <nav className="hidden md:flex">
-          <ul>
-            <li>
-              <Link href={""} />
-              isso ai
-            </li>
+        <nav className="hidden md:flex  space-x-8">
+          <ul className="flex items-center space-x-4">
+            {ServerData.categories.map((data, index) => (
+              <li key={index}>
+                <Link href={""} />
+                {data.category} - {data.description}
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

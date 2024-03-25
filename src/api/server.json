@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "category": "Eletrica",
+      "description": "material de eletrica"
+    },
+    {
+      "category": "Hidraulica",
+      "description": "material de eletrica"
+    },
+    {
+      "category": "decoração",
+      "description": "material de eletrica"
+    },
+    {
+      "category": "Ferramentas",
+      "description": "material de eletrica"
+    }
+  ]
+}

@@ -10,13 +10,13 @@ const customTheme: CustomFlowbiteTheme = {
     base: "flex flex-col gap-2",
     tablist: {
       tabitem: {
-        base: "flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-gray-500 focus:ring-0 focus:ring-cyan-300 focus:outline-none",
+        base: "flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-slate-500 focus:ring-0 focus:outline-none",
         styles: {
           fullWidth: {
             base: "ml-0 first:ml-0 w-full rounded-none flex",
             active: {
-              on: "p-4 text-gray-900 bg-gray-100 active dark:bg-gray-700 dark:text-white rounded-none",
-              off: "bg-white hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 rounded-none",
+              on: "p-4 text-slate-900 bg-slate-100 active dark:bg-slate-700 dark:text-white rounded-none",
+              off: "bg-white hover:text-slate-700 hover:bg-slate-50 dark:hover:text-white dark:bg-slate-800 dark:hover:bg-slate-700 rounded-none",
             },
           },
         },
@@ -25,7 +25,7 @@ const customTheme: CustomFlowbiteTheme = {
   },
 };
 
-export default function Product({ params }) {
+export default function Product({ params }: { params: any }) {
   const [openModal, setOpenModal] = useState(false);
   console.log(params);
   return (
@@ -87,28 +87,32 @@ export default function Product({ params }) {
                   <Tabs.Item active title="Descrição do produto">
                     This is{" "}
                     <span className="font-medium text-gray-800 dark:text-white">
-                      Profile tab's associated content
+                      Profile associated content
                     </span>
                     . Clicking another tab will toggle the visibility of this
                     one for the next. The tab JavaScript swaps classes to
                     control the content visibility and styling.
                   </Tabs.Item>
                   <Tabs.Item title="Características do produto">
-                    This is{" "}
-                    <span className="font-medium text-gray-800 dark:text-white">
-                      Dashboard tab's associated content
-                    </span>
-                    . Clicking another tab will toggle the visibility of this
-                    one for the next. The tab JavaScript swaps classes to
-                    control the content visibility and styling.
+                    <div className="w-full flex flex-col">
+                      <div className="flex items-center space-x-2 bg-slate-200  p-2 ">
+                        <span className="font-bold">nome: </span> <span>descrição</span>
+                      </div>
+                      <div className="flex items-center space-x-2  p-2 ">
+                        <span>nome: </span> <span>descrição</span>
+                      </div>
+                      <div className="flex items-center space-x-2 bg-slate-200  p-2 ">
+                        <span>nome: </span> <span>descrição</span>
+                      </div>
+                    </div>
                   </Tabs.Item>
                 </Tabs>
               </Flowbite>
             </div>
           </div>
         </div>
-        <RelatedProducts/>
-        <BannerAdsVideo/>
+        <RelatedProducts />
+        <BannerAdsVideo />
       </main>
       <Modal show={openModal} onClose={() => setOpenModal(false)}>
         <Modal.Header>Terms of Service</Modal.Header>

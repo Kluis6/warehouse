@@ -16,7 +16,7 @@ export default function CarouselCategories() {
             <button className="absolute left-0 bg-white shadow rounded-full p-2 flex items-center justify-center active:scale-90 transition-transform ">
               <BsChevronLeft className="text-red-700" size={22} />
             </button>
-            <Link href={""}>
+            <Link href="/category">
               <div className="size-32 flex-none bg-green-500 rounded-full border-2 border-red-700"></div>
             </Link>
             <Link href={""}>
