@@ -1,8 +1,9 @@
 import BannerAdsVideo from "@/components/home/bannerAdsVideo";
 import BannerHome from "@/components/home/bannerHome";
-import BannerMarks from "@/components/home/bannerMarks";
-import CarouselCategories from "@/components/home/carouselCategories";
+import BannerMarks from "@/components/others/bannerMarks";
+import CarouselCategories from "@/components/others/carouselCategories";
 import SectionProducts from "@/components/home/sectionProducts";
+import PromoBanner from "@/components/others/promoBanner";
 
 export default function Home() {
   return (
@@ -12,8 +13,11 @@ export default function Home() {
         <SectionProducts />
         <CarouselCategories />
         <SectionProducts />
+        <PromoBanner />
+        <SectionProducts />
         <BannerAdsVideo />
         <SectionProducts />
+        <PromoBanner />
         <SectionProducts />
         <BannerMarks />
         <SectionProducts />

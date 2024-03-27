@@ -20,20 +20,29 @@ export default function Cardproduct() {
         {confirm ? (
           <BsCheckLg size={20} className="text-green-700" />
         ) : (
-          <BsPlusLg size={20} className="text-red-700" />
+          <BsPlusLg size={20} className="text-blue-700" />
         )}
       </button>
       <Link href="/product">
         <div className="w-full h-[15rem] bg-slate-500"></div>
 
         <div className="lg:px-4 px-2 py-4 space-y-4">
-          <h4 className="text-sm line-clamp-2 text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor sit, amet consectetur adipisicing elit. Dignissimos quas
-            blanditiis maiores consequuntur nesciunt esse, officia, voluptates
-            porro aspernatur fuga neque dolores impedit ea atque cumque,
-            laboriosam nisi. Minima, ratione?
-          </h4>
+          <div className="flex flex-col space-y-2">
+            <h4 className="text-sm line-clamp-2 text-gray-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+              ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
+              quas blanditiis maiores consequuntur nesciunt esse, officia,
+              voluptates porro aspernatur fuga neque dolores impedit ea atque
+              cumque, laboriosam nisi. Minima, ratione?
+            </h4>
+            <Link href={""}>
+              <div className="bg-yellow-200 py-1 px-2.5 text-xs rounded-full  space-x-1 text-ellipsis flex items-center w-fit">
+                <span className="font-normal">Vendido por:</span>
+                <p className="font-medium text-ellipsis ">Nome da Loja</p>
+              </div>
+            </Link>
+          </div>
+
           <div>
             <p className="text-lg font-bold text-slate-900">R$ 000,00</p>
             <p className="font-normal text-slate-500 text-xs">

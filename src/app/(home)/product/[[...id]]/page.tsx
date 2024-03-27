@@ -2,8 +2,10 @@
 import BannerAdsVideo from "@/components/home/bannerAdsVideo";
 import RelatedProducts from "@/components/products/relatedProducts";
 import { CustomFlowbiteTheme, Flowbite, Modal, Tabs } from "flowbite-react";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
-import { BsWhatsapp } from "react-icons/bs";
+import { BsCheckLg, BsPlusLg, BsWhatsapp } from "react-icons/bs";
 
 const customTheme: CustomFlowbiteTheme = {
   tabs: {
@@ -27,19 +29,33 @@ const customTheme: CustomFlowbiteTheme = {
 
 export default function Product({ params }: { params: any }) {
   const [openModal, setOpenModal] = useState(false);
-  console.log(params);
+  const [confirm, setConfirm] = useState(false);
+  const addChart = () => {
+    setConfirm(true);
+  };
+
   return (
     <>
       <main className="container mx-auto px-4 lg:px-0 my-8">
         <div className="bg-white w-full p-4 shadow rounded border border-slate-300">
           <div className="grid-cols-12 grid md:gap-4 gap-y-4 ">
-            <div className="col-span-12">
+            <div className="col-span-12 flex items-center justify-between">
               <h3 className="text-slate-700 text-lg lg:text-xl font-semibold">
-                Caixa água Polietileno 1.000L Azul Fortlev {params.slug}
+                Caixa água Polietileno 1.000L Azul Fortlev {params.id}{" "}
               </h3>
+              <button
+                className=" bg-white rounded-full p-1.5 shadow-lg active:scale-90 transition-all duration-100  active:shadow  outline outline-1 outline-slate-100"
+                onClick={addChart}
+              >
+                {confirm ? (
+                  <BsCheckLg size={20} className="text-green-700" />
+                ) : (
+                  <BsPlusLg size={20} className="text-blue-700" />
+                )}
+              </button>
             </div>
             <div className="col-span-12 md:col-span-6">
-              <div className="h-full w-full bg-teal-500 p-4"></div>
+              {/* <div className="h-full w-full bg-teal-500 p-4"></div> */}
             </div>
             <div className="col-span-12 md:col-span-6 ">
               <div className="flex flex-col space-y-4">
@@ -49,6 +65,12 @@ export default function Product({ params }: { params: any }) {
                   accusamus minus modi pariatur, impedit eum, suscipit magnam
                   harum debitis adipisci incidunt odio cupiditate?
                 </p>
+                <Link href={""}>
+                  <div className="bg-yellow-200 py-1 px-2.5 text-xs rounded-full  space-x-1 text-ellipsis flex items-center w-fit">
+                    <span className="font-normal">Vendido por:</span>
+                    <p className="font-medium text-ellipsis ">Nome da Loja</p>
+                  </div>
+                </Link>
                 <section className=" flex items-center justify-between">
                   <div>
                     <h4 className="lg:text-2xl text-xl font-medium text-slate-900">
@@ -96,7 +118,8 @@ export default function Product({ params }: { params: any }) {
                   <Tabs.Item title="Características do produto">
                     <div className="w-full flex flex-col">
                       <div className="flex items-center space-x-2 bg-slate-200  p-2 ">
-                        <span className="font-bold">nome: </span> <span>descrição</span>
+                        <span className="font-bold">nome: </span>{" "}
+                        <span>descrição</span>
                       </div>
                       <div className="flex items-center space-x-2  p-2 ">
                         <span>nome: </span> <span>descrição</span>

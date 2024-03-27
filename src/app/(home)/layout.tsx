@@ -1,5 +1,5 @@
-import Footers from "@/components/home/footers";
-import Nav from "@/components/nav";
+import Footers from "@/components/others/footers";
+import Nav from "@/components/others/nav";
 import { Metadata } from "next";
 import React from "react";
 
