@@ -1,7 +1,13 @@
 "use client";
 import BannerAdsVideo from "@/components/home/bannerAdsVideo";
 import RelatedProducts from "@/components/products/relatedProducts";
-import { CustomFlowbiteTheme, Flowbite, Modal, Tabs } from "flowbite-react";
+import {
+  Carousel,
+  CustomFlowbiteTheme,
+  Flowbite,
+  Modal,
+  Tabs,
+} from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,10 +15,15 @@ import { BsCheckLg, BsPlusLg, BsWhatsapp } from "react-icons/bs";
 
 const customTheme: CustomFlowbiteTheme = {
   tabs: {
-    base: "flex flex-col gap-2",
+    base: "flex flex-col gap-2 ",
     tablist: {
+      base: "flex text-center",
+      styles: {
+        fullWidth:
+          "grid w-full md:grid-flow-col grid-flow-row md:divide-x divide-y md:divide-y-0 divide-slate-200 rounded-none text-sm font-medium shadow dark:divide-slate-700 dark:text-slate-400",
+      },
       tabitem: {
-        base: "flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-slate-500 focus:ring-0 focus:outline-none",
+        base: "flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-slate-400 disabled:dark:text-slate-500 focus:ring-0 focus:outline-none",
         styles: {
           fullWidth: {
             base: "ml-0 first:ml-0 w-full rounded-none flex",
@@ -40,11 +51,11 @@ export default function Product({ params }: { params: any }) {
         <div className="bg-white w-full p-4 shadow rounded border border-slate-300">
           <div className="grid-cols-12 grid md:gap-4 gap-y-4 ">
             <div className="col-span-12 flex items-center justify-between">
-              <h3 className="text-slate-700 text-lg lg:text-xl font-semibold">
-                Caixa água Polietileno 1.000L Azul Fortlev {params.id}{" "}
+              <h3 className="text-slate-700 text-lg lg:text-xl font-semibold line-clamp-1 ">
+                Caixa água Polietileno 1.000L Azul Fortlev
               </h3>
               <button
-                className=" bg-white rounded-full p-1.5 shadow-lg active:scale-90 transition-all duration-100  active:shadow  outline outline-1 outline-slate-100"
+                className="bg-white rounded-full p-1.5 shadow-lg active:scale-90 transition-all duration-100  active:shadow  outline outline-1 outline-slate-100"
                 onClick={addChart}
               >
                 {confirm ? (
@@ -55,7 +66,40 @@ export default function Product({ params }: { params: any }) {
               </button>
             </div>
             <div className="col-span-12 md:col-span-6">
-              {/* <div className="h-full w-full bg-teal-500 p-4"></div> */}
+              <div className="h-[27.5rem] w-full ">
+                <Carousel slide={false} leftControl="" rightControl="">
+                  <Image
+                    width={400}
+                    height={440}
+                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                    alt="..."
+                  />
+                  <Image
+                    width={400}
+                    height={440}
+                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                    alt="..."
+                  />
+                  <Image
+                    width={400}
+                    height={440}
+                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                    alt="..."
+                  />
+                  <Image
+                    width={400}
+                    height={440}
+                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                    alt="..."
+                  />
+                  <Image
+                    width={400}
+                    height={440}
+                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                    alt="..."
+                  />
+                </Carousel>
+              </div>
             </div>
             <div className="col-span-12 md:col-span-6 ">
               <div className="flex flex-col space-y-4">
@@ -66,12 +110,12 @@ export default function Product({ params }: { params: any }) {
                   harum debitis adipisci incidunt odio cupiditate?
                 </p>
                 <Link href={""}>
-                  <div className="bg-yellow-200 py-1 px-2.5 text-xs rounded-full  space-x-1 text-ellipsis flex items-center w-fit">
+                  <div className="bg-yellow-200 py-1 px-2.5 text-xs rounded-full  space-x-1  flex items-center w-fit">
                     <span className="font-normal">Vendido por:</span>
                     <p className="font-medium text-ellipsis ">Nome da Loja</p>
                   </div>
                 </Link>
-                <section className=" flex items-center justify-between">
+                <section className="flex flex-col md:flex-row items-start md:items-center justify-between space-y-2">
                   <div>
                     <h4 className="lg:text-2xl text-xl font-medium text-slate-900">
                       R$ 000,00
@@ -84,7 +128,7 @@ export default function Product({ params }: { params: any }) {
                   <button
                     onClick={() => setOpenModal(true)}
                     type="button"
-                    className="text-blue-700 font-normal font-sans lg:text-sm text-xs"
+                    className="text-blue-700 font-normal font-sans text-sm "
                   >
                     Formas de pagamento
                   </button>
@@ -92,7 +136,7 @@ export default function Product({ params }: { params: any }) {
                 <div className="flex items-center justify-center w-full md:justify-end">
                   <button
                     type="button"
-                    className="bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-md py-2.5 px-5 text-white font-bold flex items-center md:w-auto justify-center  space-x-2 w-full "
+                    className="bg-green-500 hover:bg-green-600 active:bg-green-700 rounded-md py-2.5 px-5 text-white font-bold flex items-center md:w-auto justify-center  space-x-2 w-full my-2 md:my-0"
                   >
                     <BsWhatsapp /> <span>WhatsApp</span>
                   </button>
@@ -101,11 +145,7 @@ export default function Product({ params }: { params: any }) {
             </div>
             <div className="col-span-12">
               <Flowbite theme={{ theme: customTheme }}>
-                <Tabs
-                  aria-label="Mais informações"
-                  style="fullWidth"
-                  className="focus:ring-0"
-                >
+                <Tabs aria-label="Mais informações" style="fullWidth">
                   <Tabs.Item active title="Descrição do produto">
                     This is{" "}
                     <span className="font-medium text-gray-800 dark:text-white">

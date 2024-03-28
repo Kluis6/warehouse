@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { BsCheckLg, BsPlusLg } from "react-icons/bs";
@@ -14,7 +15,7 @@ export default function Cardproduct() {
     <div className="relative flex flex-col overflow-hidden bg-white outline rounded outline-1 outline-slate-300 hover:shadow-xl transition-shadow duration-300 active:shadow">
       {/* <Image src={""} alt={""} width={100} className="w-full h-[15rem]" /> */}
       <button
-        className="right-4 top-4 absolute bg-white rounded-full p-1.5 shadow-lg active:scale-90 transition-all duration-100  active:shadow z-30"
+        className="md:top-4 md:bottom-auto bottom-4 right-4 absolute bg-white rounded-full p-1.5 shadow-lg active:scale-90 transition-all duration-100  active:shadow z-30"
         onClick={addChart}
       >
         {confirm ? (
@@ -23,8 +24,14 @@ export default function Cardproduct() {
           <BsPlusLg size={20} className="text-blue-700" />
         )}
       </button>
-      <Link href="/product">
-        <div className="w-full h-[15rem] bg-slate-500"></div>
+      <Link href="/product" className="flex sm:flex-col">
+        {/* <div className="md:w-full sm:h-[14rem] bg-slate-500 w-[40rem] p-10"></div> */}
+        <Image
+          src="https://images.pexels.com/photos/6585741/pexels-photo-6585741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          width={130}
+          height={150}
+          alt={""}
+        />
 
         <div className="lg:px-4 px-2 py-4 space-y-4">
           <div className="flex flex-col space-y-2">

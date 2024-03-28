@@ -15,22 +15,22 @@ export default function sectionProducts() {
           Seção de produtos{" "}
         </h3>
       </div>
-      <div className="xl:col-span-2 md:col-span-4 col-span-6">
+      <div className="xl:col-span-2 md:col-span-4 sm:col-span-6 col-span-12">
         <Cardproduct />
       </div>
-      <div className="xl:col-span-2 md:col-span-4 col-span-6">
+      <div className="xl:col-span-2 md:col-span-4 sm:col-span-6 col-span-12">
         <Cardproduct />
       </div>
-      <div className="xl:col-span-2 md:col-span-4 col-span-6">
+      <div className="xl:col-span-2 md:col-span-4 sm:col-span-6 col-span-12">
         <Cardproduct />
       </div>
-      <div className="xl:col-span-2 md:col-span-4 col-span-6">
+      <div className="xl:col-span-2 md:col-span-4 sm:col-span-6 col-span-12">
         <Cardproduct />
       </div>
-      <div className="xl:col-span-2 md:col-span-4 col-span-6">
+      <div className="xl:col-span-2 md:col-span-4 sm:col-span-6 col-span-12">
         <Cardproduct />
       </div>
-      <div className="xl:col-span-2 md:col-span-4 col-span-6">
+      <div className="xl:col-span-2 md:col-span-4 sm:col-span-6 col-span-12">
         <Cardproduct />
       </div>
       <div className="col-span-12 flex justify-end ">
