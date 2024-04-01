@@ -38,6 +38,15 @@ const customTheme: CustomFlowbiteTheme = {
   },
 };
 
+const carouselTheme: CustomFlowbiteTheme = {
+  carousel: {
+
+    control: {
+      base: `inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10`,
+      icon: "h-5 w-5 text-white dark:text-gray-800 sm:h-6 sm:w-6",
+    },
+  },
+};
 export default function Product({ params }: { params: any }) {
   const [openModal, setOpenModal] = useState(false);
   const [confirm, setConfirm] = useState(false);
@@ -67,38 +76,40 @@ export default function Product({ params }: { params: any }) {
             </div>
             <div className="col-span-12 md:col-span-6">
               <div className="h-[27.5rem] w-full ">
-                <Carousel slide={false} leftControl="" rightControl="">
-                  <Image
-                    width={400}
-                    height={440}
-                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-                    alt="..."
-                  />
-                  <Image
-                    width={400}
-                    height={440}
-                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-                    alt="..."
-                  />
-                  <Image
-                    width={400}
-                    height={440}
-                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-                    alt="..."
-                  />
-                  <Image
-                    width={400}
-                    height={440}
-                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-                    alt="..."
-                  />
-                  <Image
-                    width={400}
-                    height={440}
-                    src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-                    alt="..."
-                  />
-                </Carousel>
+                <Flowbite theme={{ theme: carouselTheme }}>
+                  <Carousel slide={false} indicators={confirm}>
+                    <Image
+                      width={400}
+                      height={440}
+                      src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                      alt="..."
+                    />
+                    <Image
+                      width={400}
+                      height={440}
+                      src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                      alt="..."
+                    />
+                    <Image
+                      width={400}
+                      height={440}
+                      src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                      alt="..."
+                    />
+                    <Image
+                      width={400}
+                      height={440}
+                      src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                      alt="..."
+                    />
+                    <Image
+                      width={400}
+                      height={440}
+                      src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+                      alt="..."
+                    />
+                  </Carousel>
+                </Flowbite>
               </div>
             </div>
             <div className="col-span-12 md:col-span-6 ">
@@ -109,7 +120,7 @@ export default function Product({ params }: { params: any }) {
                   accusamus minus modi pariatur, impedit eum, suscipit magnam
                   harum debitis adipisci incidunt odio cupiditate?
                 </p>
-                <Link href={""}>
+                <Link href="/clientstore">
                   <div className="bg-yellow-200 py-1 px-2.5 text-xs rounded-full  space-x-1  flex items-center w-fit">
                     <span className="font-normal">Vendido por:</span>
                     <p className="font-medium text-ellipsis ">Nome da Loja</p>

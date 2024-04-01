@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { SetStateAction, useState } from "react";
-import Server from "@/api/server.json";
+import Server from "@/app/api/server"
 
 import { BsHouse, BsList, BsPerson, BsSearch, BsX } from "react-icons/bs";
 

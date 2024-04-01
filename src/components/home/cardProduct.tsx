@@ -15,7 +15,7 @@ export default function Cardproduct() {
     <div className="relative flex flex-col overflow-hidden bg-white outline rounded outline-1 outline-slate-300 hover:shadow-xl transition-shadow duration-300 active:shadow">
       {/* <Image src={""} alt={""} width={100} className="w-full h-[15rem]" /> */}
       <button
-        className="md:top-4 md:bottom-auto bottom-4 right-4 absolute bg-white rounded-full p-1.5 shadow-lg active:scale-90 transition-all duration-100  active:shadow z-30"
+        className=" bottom-4 right-4 md:top-4 md:bottom-auto  absolute bg-white rounded-full p-1.5 shadow-lg active:scale-90 transition-all duration-100  active:shadow z-30"
         onClick={addChart}
       >
         {confirm ? (
@@ -31,6 +31,7 @@ export default function Cardproduct() {
           width={130}
           height={150}
           alt={""}
+          className="sm:w-full"
         />
 
         <div className="lg:px-4 px-2 py-4 space-y-4">
