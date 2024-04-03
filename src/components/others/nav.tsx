@@ -75,10 +75,10 @@ export default function Nav() {
         </div>
         <nav className="hidden md:flex  space-x-8">
           <ul className="flex items-center space-x-4">
-            {ServerData.categories.map((data, index) => (
+            {ServerData.categories.map((data: { category: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; }, index: React.Key | null | undefined) => (
               <li key={index}>
                 <Link href={""} />
-                {data.category} - {data.description}
+                {data.category} 
               </li>
             ))}
           </ul>

@@ -8,7 +8,7 @@ export default function Footers() {
       <div className="container mx-auto px-4 xl:px-0">
         <div className="grid grid-cols-12">
           <div className="col-span-3">
-            <div></div>
+            <div>scscsaca</div>
           </div>
           <div className="col-span-3"></div>
           <div className="col-span-3"></div>
