@@ -1,11 +1,6 @@
 import Link from "next/link";
-
 import Cardproduct from "./cardProduct";
-import {
-  BsArrowRight,
-  BsChevronBarRight,
-  BsChevronRight,
-} from "react-icons/bs";
+import { BsChevronRight } from "react-icons/bs";
 
 export default function sectionProducts() {
   return (

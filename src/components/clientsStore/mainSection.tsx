@@ -9,7 +9,15 @@ export default function MainSection() {
         <div className="lg:col-span-3 hidden lg:flex">
           <div className="bg-white p-4 w-full shadow h-52">
             <h2 className="text-base lg:text-lg font-bold">Filtrar por:</h2>
-            <section>sdds</section>
+            <section>
+              <h3 className="font-medium">Departamento</h3>
+              <ul>
+                <li>Construção</li>
+                <li>Pintura</li>
+              </ul>
+              <h3>Categoria</h3>
+              <h3>Marca</h3>
+            </section>
           </div>
         </div>
         <div className="lg:col-span-9 col-span-12 ">
