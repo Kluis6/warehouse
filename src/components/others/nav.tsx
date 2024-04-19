@@ -124,14 +124,17 @@ export default function Nav() {
         <section className="bg-yellow-300 ">
           <div className="container mx-auto p-4 space-y-4">
             <div className="flex items-center space-x-4 ">
-              <div className="size-[3.5rem]">
-                <div className="bg-white w-full h-full rounded-full "></div>
+              <div className="flex-none">
+                <div className="bg-slate-50 size-14 flex items-center justify-center rounded-full">
+                <BsPerson size={28}  className="text-slate-500"/>
+                </div>
+             
               </div>
               <div className="flex flex-col">
                 <h2 className="text-base text-slate-700 font-semibold font-sans">
                   Bem-vindo
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm font-sans text-slate-600">
                   Entre na sua conta para ver sua lista de orçamentos
                 </p>
               </div>
