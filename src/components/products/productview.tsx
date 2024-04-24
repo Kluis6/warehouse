@@ -1,5 +1,5 @@
 "use client";
-import { Carousel, CustomFlowbiteTheme, Flowbite, Modal, Tabs } from "flowbite-react";
+import { Carousel, CustomFlowbiteTheme, Flowbite, Modal } from "flowbite-react";
 import Link from "next/link";
 import React, { useState } from "react";
 import { BsCheckLg, BsPlusLg, BsWhatsapp } from "react-icons/bs";
@@ -13,33 +13,18 @@ const carouselTheme: CustomFlowbiteTheme = {
   },
 };
 
-const customTheme: CustomFlowbiteTheme = {
-  tabs: {
-    base: "flex flex-col gap-2 ",
-    tablist: {
-      base: "flex text-center",
-      styles: {
-        fullWidth:
-          "grid w-full md:grid-flow-col grid-flow-row md:divide-x divide-y md:divide-y-0 divide-slate-200 rounded-none text-sm font-medium shadow dark:divide-slate-700 dark:text-slate-400",
-      },
-      tabitem: {
-        base: "flex items-center justify-center p-4 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-slate-400 disabled:dark:text-slate-500 focus:ring-0 focus:outline-none",
-        styles: {
-          fullWidth: {
-            base: "ml-0 first:ml-0 w-full rounded-none flex",
-            active: {
-              on: "p-4 text-slate-900 bg-slate-100 active dark:bg-slate-700 dark:text-white rounded-none",
-              off: "bg-white hover:text-slate-700 hover:bg-slate-50 dark:hover:text-white dark:bg-slate-800 dark:hover:bg-slate-700 rounded-none",
-            },
-          },
-        },
-      },
-    },
-  },
-};
 export default function Productview() {
   const [openModal, setOpenModal] = useState(false);
   const [confirm, setConfirm] = useState(false);
+  const [tabs, setTabs] = useState(true);
+
+  const tab1 = () => {
+    setTabs(true);
+  };
+  const tab2 = () => {
+    setTabs(false);
+  };
+
   const addChart = () => {
     setConfirm(true);
   };
@@ -102,7 +87,7 @@ export default function Productview() {
           </div>
 
           <div className="col-span-12 md:col-span-6 ">
-            <div className="flex flex-col space-y-4">
+            <article className="flex flex-col space-y-4">
               <p className="font-normal text-gray-700 text-sm md:text-base">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
                 itaque ipsum provident quasi similique laboriosam ab, accusamus
@@ -141,36 +126,61 @@ export default function Productview() {
                   <BsWhatsapp /> <span>WhatsApp</span>
                 </button>
               </div>
-            </div>
+            </article>
           </div>
           <div className="col-span-12">
-            <Flowbite theme={{ theme: customTheme }}>
-              <Tabs aria-label="Mais informações" style="fullWidth">
-                <Tabs.Item active title="Descrição do produto">
-                  This is{" "}
-                  <span className="font-medium text-gray-800 dark:text-white">
-                    Profile associated content
-                  </span>
-                  . Clicking another tab will toggle the visibility of this one
-                  for the next. The tab JavaScript swaps classes to control the
-                  content visibility and styling.
-                </Tabs.Item>
-                <Tabs.Item title="Características do produto">
-                  <div className="w-full flex flex-col">
-                    <div className="flex items-center space-x-2 bg-slate-200  p-2 ">
-                      <span className="font-bold">nome: </span>{" "}
-                      <span>descrição</span>
+            <div className="flex flex-col gap-4">
+              <section className="flex items-center gap-2 md:gap-4 md:flex-row flex-col">
+                <button
+                  className={`p-4 rounded text-center w-full font-bold text-sm md:text-base transition-all  ${
+                    tabs
+                      ? "bg-slate-400 text-slate-800"
+                      : "bg-slate-200 hover:bg-slate-300 text-slate-700"
+                  }`}
+                  onClick={tab1}
+                >
+                  Descrição do produto
+                </button>
+                <button
+                  className={`p-4 rounded text-center w-full font-bold text-sm md:text-base transition-all  ${
+                    tabs
+                      ? "bg-slate-200 hover:bg-slate-300 text-slate-700"
+                      : "bg-slate-400 text-slate-800"
+                  }`}
+                  onClick={tab2}
+                >
+                  Características do produto
+                </button>
+              </section>
+              <section className="flex flex-col w-full">
+                <div>
+                  {tabs ? (
+                    <div className="flex flex-col transition-all">
+                      <p className="text-base text-left font-sans text-slate-900">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Expedita at illo ipsum impedit earum consequatur,
+                        debitis amet eligendi repellendus asperiores quis
+                        sapiente, provident in error dolor! Exercitationem fugit
+                        asperiores nihil?
+                      </p>
                     </div>
-                    <div className="flex items-center space-x-2  p-2 ">
-                      <span>nome: </span> <span>descrição</span>
+                  ) : (
+                    <div className="text-left w-full">
+                      <ul>
+                        <li className="flex items-center space-x-1 bg-slate-100 py-1">
+                          <span className="font-bold text-sm text-slate-900">Nome do Atributo</span>:
+                          <span className=" text-sm font-normal text-slate-800">descrição do atributo </span>
+                        </li>
+                        <li className="flex items-center space-x-1 py-1">
+                          <span className="font-bold text-sm text-slate-900">Nome do Atributo</span>:
+                          <span className=" text-sm font-normal text-slate-800">descrição do atributo </span>
+                        </li>
+                      </ul>
                     </div>
-                    <div className="flex items-center space-x-2 bg-slate-200  p-2 ">
-                      <span>nome: </span> <span>descrição</span>
-                    </div>
-                  </div>
-                </Tabs.Item>
-              </Tabs>
-            </Flowbite>
+                  )}
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </div>

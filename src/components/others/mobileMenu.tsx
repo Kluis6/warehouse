@@ -11,13 +11,13 @@ export default function MobileMenu({
 }) {
   return (
     <div
-      className={`bg-white transition-all absolute h-dvh ease-in-out duration-300  z-40 ${
+      className={`bg-white transition-all absolute h-dvh ease-in-out duration-300 z-40 ${
         open ? "w-screen visible" : "hidden"
       }`}
     >
       <div
         className={`${
-          open ? "visible " : "hidden"
+          open ? "visible" : "hidden"
         } duration-300 transition-all`}
       >
         {children}

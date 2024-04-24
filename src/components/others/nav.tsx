@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { SetStateAction, useState } from "react";
-import Server from "@/app/api/server";
+// import Server from "@/app/api/server";
 
 import {
   BsHouse,
@@ -20,7 +20,7 @@ export default function Nav() {
     setMobile(!mobile);
   };
 
-  const ServerData = Server;
+  // const ServerData = Server;
 
   const searchSubmit = (e: { target: { value: SetStateAction<string> } }) => {
     setSearchInput(e.target.value);
@@ -90,7 +90,7 @@ export default function Nav() {
             </div>
           </div>
           <nav className="hidden md:flex  space-x-8">
-            <ul className="flex items-center space-x-4">
+            {/* <ul className="flex items-center space-x-4">
               {ServerData.categories.map(
                 (
                   data: {
@@ -116,7 +116,7 @@ export default function Nav() {
                   </li>
                 )
               )}
-            </ul>
+            </ul> */}
           </nav>
         </div>
       </div>

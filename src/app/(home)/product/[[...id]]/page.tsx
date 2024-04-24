@@ -5,7 +5,7 @@ import RelatedProducts from "@/components/products/relatedProducts";
 export default function Product({ params }: { params: any }) {
   return (
     <>
-      <main className="container mx-auto px-4 lg:px-0 my-8">
+      <main className="container mx-auto px-4 md:px-0 lg:px-4 my-8">
         <Productview />
         <RelatedProducts />
         <BannerAdsVideo />
