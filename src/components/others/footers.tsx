@@ -55,16 +55,16 @@ export default function Footers() {
             <h3 className="font-semibold text-sm text-slate-800">Minha conta</h3>
             <ul className="space-y-1">
               <li className="text-sm font-normal text-slate-700 hover:underline hover:decoration-1 decoration-slate-700">
-                <Link href={""}>Para você</Link>
+                <Link href={"/userlogin"}>Para você</Link>
               </li>
               <li className="text-sm font-normal text-slate-700 hover:underline hover:decoration-1 decoration-slate-700">
-                <Link href={""}>Para empresas</Link>
+                <Link href={"/clientlogin"}>Para empresas</Link>
               </li>
       
             </ul>
           </div>
           <div className="col-span-12">
-            <p className="text-sm">Todos os direitos reserados</p>
+            <p className="text-sm mt-8">Todos os direitos reserados</p>
           </div>
         </div>
       </div>
